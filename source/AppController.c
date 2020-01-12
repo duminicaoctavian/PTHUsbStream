@@ -133,8 +133,7 @@ static void AppControllerFire(void* pvParameters)
         {
             if (SensorSetup.Enable.Pressure && SensorSetup.Enable.Temp && SensorSetup.Enable.Humidity)
             {
-                printf("BME280 Environmental Data: { Pressure = %ld Pa, Temperature = %ld mDeg, rh = %ld %%rh }\n",
-                        (long int) sensorValue.Pressure, (long int) sensorValue.Temp, (long int) sensorValue.RH);
+                printf("%ld,%ld,%ld\n", (long int) sensorValue.Pressure, (long int) sensorValue.Temp, (long int) sensorValue.RH);
             }
         }
         if (RETCODE_OK != retcode)
